@@ -74,13 +74,13 @@ function startSharing() {
     .catch(log);
 }
 
-// Promise.all([
-//   faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-//   faceapi.nets.ssdMobilenetv1.loadFromUri("/models"),
-//   faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
-//   faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-//   faceapi.nets.faceExpressionNet.loadFromUri('/models'),
-// ]);
+Promise.all([
+  faceapi.nets.tinyFaceDetector.loadFromUri('https://cdn.jsdelivr.net/gh/asif771/Recognized_face_and_record/models/'),
+  faceapi.nets.ssdMobilenetv1.loadFromUri("https://cdn.jsdelivr.net/gh/asif771/Recognized_face_and_record/models/"),
+  faceapi.nets.faceLandmark68Net.loadFromUri("https://cdn.jsdelivr.net/gh/asif771/Recognized_face_and_record/models/"),
+  faceapi.nets.faceRecognitionNet.loadFromUri('https://cdn.jsdelivr.net/gh/asif771/Recognized_face_and_record/models/'),
+  faceapi.nets.faceExpressionNet.loadFromUri('https://cdn.jsdelivr.net/gh/asif771/Recognized_face_and_record/models/')
+]);
 
 
 async function startWebcam() {
